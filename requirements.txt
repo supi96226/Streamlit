@@ -9,4 +9,4 @@ keras>=3.0.0
 seaborn
 imbalanced-learn
 keras-tuner>=1.3.5
-protobuf>=4.23.4git
+protobuf>=4.23.4
