@@ -54,7 +54,7 @@ def transform_data(X):
     """
 
     X_scaled = X * 1  # Placeholder for actual scaling
-    X_reshaped = np.reshape(X_scaled, (X_scaled.shape[0], X_scaled.shape[1], 1))
+    X_reshaped = np.reshape(X_scaled.values, (X_scaled.shape[0], X_scaled.shape[1], 1))
     return X_reshaped
 
 
