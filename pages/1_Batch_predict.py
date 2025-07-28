@@ -94,6 +94,12 @@ def render():
     st.header("Batch Churn Prediction")
     # Browse for file and load data from CSV
     userid_df = section_load_data_element()
+
+    # Check if database is loaded, if not initialize it
+    if 'uploaded_db_df' not in st.session_state:
+        from utils.db_utils import init_db
+        init_db()
+
     prediction_df = extract_prediction_data(userid_df, st.session_state.uploaded_db_df)
 
     # User selection for model and threshold
