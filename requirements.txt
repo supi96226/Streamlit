@@ -6,3 +6,4 @@ streamlit
 matplotlib
 seaborn
 shap
+protobuf==3.20.*
