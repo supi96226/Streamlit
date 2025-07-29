@@ -24,7 +24,7 @@ def section_plot_churn_distribution(result_df):
     ax.set_xlabel("Prediction Label")
     ax.set_ylabel("Count")
     ax.set_xticks([0, 1])
-    ax.set_xticklabels(["nooooo Churn", "No Churn"])
+    ax.set_xticklabels(["Churn", "No Churn"])
     ax.yaxis.set_major_locator(plt.MaxNLocator(integer=True))
     _, pcd_col2, _ = st.columns([1, 3, 1])
     with pcd_col2:
@@ -71,7 +71,7 @@ def section_feature_wise_analysis(df, result_df):
             avg_not_churned = not_churned[day_cols].mean()
             fig, ax = plt.subplots()
             ax.plot(avg_churned.index, avg_churned.values, label="Not Churned", marker='o')
-            ax.plot(avg_not_churned.index, avg_not_churned.values, label="nooooo Churned", marker='o')
+            ax.plot(avg_not_churned.index, avg_not_churned.values, label="Churned", marker='o')
             ax.set_title(f"{feature}: Average Values Over 30 Days")
             ax.set_xlabel("Day")
             ax.set_ylabel("Average Value")
